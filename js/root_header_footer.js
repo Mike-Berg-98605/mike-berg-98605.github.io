@@ -14,6 +14,7 @@ const header = `<!DOCTYPE html>
 <div class="wh-row"></div>
 <div class="nav-bar">
     <a class="nav-a" href="index.html">| Home |</a>
+    <a class="nav-a" href="finance_apps/finance_apps.html">| Finance Apps |</a>
     <a class="nav-a" href="games/game_menu.html">| Games |</a>
     <a class="nav-a" href="poems/poems_menu.html">| Poems |</a>
 	<a class="nav-a" href="about/about.html">| About |</a>
