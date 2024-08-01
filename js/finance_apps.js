@@ -47,7 +47,7 @@ const getStandardDeviation = (array) => {
 }
 
 const calculate = () => {
-  const value = document.querySelector("#numbers").value;
+  const value = document.querySelector("#stats-numbers").value;
   const array = value.split(/,\s*/g);
   const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
   
@@ -58,10 +58,10 @@ const calculate = () => {
   const variance = getVariance(numbers);
   const standardDeviation = getStandardDeviation(numbers);
 
-  document.querySelector("#mean").textContent = mean;
-  document.querySelector("#median").textContent = median;
-  document.querySelector("#mode").textContent = mode;
-  document.querySelector("#range").textContent = range;
-  document.querySelector("#variance").textContent = variance;
-  document.querySelector("#standardDeviation").textContent = standardDeviation;
+  document.querySelector("#stats-mean").textContent = mean;
+  document.querySelector("#stats-median").textContent = median;
+  document.querySelector("#stats-mode").textContent = mode;
+  document.querySelector("#stats-range").textContent = range;
+  document.querySelector("#stats-variance").textContent = variance;
+  document.querySelector("#stats-standardDeviation").textContent = standardDeviation;
 }

@@ -1,50 +1,57 @@
 <div id="header"></div>
 
-    <div class="">
-        <p>Welcome to The Finance Apps Pages!</p>
-    </div>
+<div class="finance-apps-welc-message">
+<h1>Welcome to The Finance Apps Page!</h1>
+<p>Below you will find several different Finance Applications></p>
+</div>
 
+<div class="fin-apps-box">
+	
+    <div class="fin-apps-hr"></div>
+    
     <h1>Statistics Calculator</h1>
     <p>Enter a list of comma-separated numbers.</p>
     <form onsubmit="calculate(); return false;">
       <label for="numbers">Numbers:</label>
-      <input type="text" name="numbers" id="numbers" />
+      <input type="text" name="stats-numbers" id="stats-numbers" />
       <button type="submit">Calculate</button>
     </form>
-    <div class="results">
+    
       <p>
         The <dfn>mean</dfn> of a list of numbers is the average, calculated by
         taking the sum of all numbers and dividing that by the count of numbers.
       </p>
-      <p class="bold">Mean: <span id="mean"></span></p>
+      <p class="bold">Mean: <span id="stats-mean"></span></p>
       <p>
         The <dfn>median</dfn> of a list of numbers is the number that appears in
         the middle of the list, when sorted from least to greatest.
       </p>
-      <p class="bold">Median: <span id="median"></span></p>
+      <p class="bold">Median: <span id="stats-median"></span></p>
       <p>
         The <dfn>mode</dfn> of a list of numbers is the number that appears most
         often in the list.
       </p>
-      <p class="bold">Mode: <span id="mode"></span></p>
+      <p class="bold">Mode: <span id="stats-mode"></span></p>
       <p>
         The <dfn>range</dfn> of a list of numbers is the difference between the
         largest and smallest numbers in the list.
       </p>
-      <p class="bold">Range: <span id="range"></span></p>
+      <p class="bold">Range: <span id="stats-range"></span></p>
       <p>
         The <dfn>variance</dfn> of a list of numbers measures how far the values
         are from the mean, on average.
       </p>
-      <p class="bold">Variance: <span id="variance"></span></p>
+      <p class="bold">Variance: <span id="stats-variance"></span></p>
       <p>
         The <dfn>standard deviation</dfn> of a list of numbers is the square
         root of the variance.
       </p>
       <p class="bold">
-        Standard Deviation: <span id="standardDeviation"></span>
+        Standard Deviation: <span id="stats-standardDeviation"></span>
       </p>
-    </div>
+ 
+</div>  
+   
 <div id="footer"></div>
 
 <script src="../js/second_level_header_footer.js"></script>

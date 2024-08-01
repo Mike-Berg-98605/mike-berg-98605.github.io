@@ -11,6 +11,7 @@ const header = `<!DOCTYPE html>
 	<link rel="stylesheet" href="../css/snake.css">
 	<link rel="stylesheet" href="../css/ascii_tic_tac_toe.css">
 	<link rel="stylesheet" href="../css/about.css">
+	<link rel="stylesheet" href="../css/finance_apps.css">
 </head>
 <div class="main-header">
     <div class="header-text">Mike's Site</div>
@@ -21,8 +22,8 @@ const header = `<!DOCTYPE html>
     <a class="nav-a" href="../finance_apps.html">| Finance Apps |</a>
     <a class="nav-a" href="../games/game_menu.html">| Games |</a>
     <a class="nav-a" href="../poems/poems_menu.html">| Poems |</a>
-	<a class="nav-a" href="../about/about.html">| About |</a>
-	<a class="nav-a" href="https://github.com/Mike-Berg-98605">| GitHub |</a>
+    <a class="nav-a" href="../about/about.html">| About |</a>
+    <a class="nav-a" href="https://github.com/Mike-Berg-98605">| GitHub |</a>
 </div>
 <div class="clear"></div>
 <div class="wh-row"></div>
