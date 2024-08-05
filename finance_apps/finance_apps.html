@@ -2,26 +2,25 @@
 
 <div class="finance-apps-welc-message">
 <h1>Welcome to The Finance Apps Page!</h1>
-<p>Below you will find several different Finance Applications></p>
+<p class="body-font">Below you will find several different Finance Applications</p>
 </div>
-
-<div class="fin-apps-box">
 	
-    <div class="fin-apps-hr"></div>
+<div class="rainbow"></div>
     
-    <h1>Statistics Calculator</h1>
+<div class="fin-apps-box">
+    
+    <p class="header-font">Statistics Calculator</p>
+    
+    <div class="body-font">
     <p>Enter a list of comma-separated numbers.</p>
+    
     <form onsubmit="calculate(); return false;">
       <label for="numbers">Numbers:</label>
       <input type="text" name="stats-numbers" id="stats-numbers" />
       <button type="submit">Calculate</button>
     </form>
     
-      <p>
-        The <dfn>mean</dfn> of a list of numbers is the average, calculated by
-        taking the sum of all numbers and dividing that by the count of numbers.
-      </p>
-      <p class="bold">Mean: <span id="stats-mean"></span></p>
+           <p class="bold">Mean: <span id="stats-mean"></span></p>
       <p>
         The <dfn>median</dfn> of a list of numbers is the number that appears in
         the middle of the list, when sorted from least to greatest.
@@ -49,13 +48,14 @@
       <p class="bold">
         Standard Deviation: <span id="stats-standardDeviation"></span>
       </p>
- 
+     </div>
 </div>  
 
-<div class="fin-apps-hr"></div>
-   
 <div id="footer"></div>
 
 <script src="../js/second_level_header_footer.js"></script>
-<script src="../js/finanace_apps.js"></script>
+<script src="../js/finance_apps.js"></script>
+
+
+
 
