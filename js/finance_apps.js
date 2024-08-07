@@ -1,3 +1,6 @@
+const statsBtn = document.getElementById("stats-btn");
+statsBtn.addEventListener("click", calculate);
+
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
 const getMedian = (array) => {
@@ -46,7 +49,7 @@ const getStandardDeviation = (array) => {
   return standardDeviation;
 }
 
-const calculate = () => {
+function calculate() {
   const value = document.querySelector("#stats-numbers").value;
   const array = value.split(/,\s*/g);
   const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));

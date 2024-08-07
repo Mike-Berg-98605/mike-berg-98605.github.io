@@ -1,4 +1,4 @@
-.finance-apps-welc-message {
+.fin-apps-welc-message {
     color: white;
     text-align:center;
 }
@@ -10,15 +10,32 @@
   text-align: center;
 }
 
-.header-font {
+.fin-apps-header-font {
   font-size: 30px;
   font-weight: bold; 
+  text-decoration: underline;
+  margin: 15px;
 }
 
-.body-font {
+.fin-apps-body-font {
   font-size: 20px;
+  margin: 5px;
 }
 
-.body-font p {
+.fin-apps-body-font p {
   margin-bottom: 5px;
+}
+
+.fin-apps-flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fin-apps-flex-container > div {
+  width: 7%;
+  height: 50px;
+  margin: 5px;
+  text-align: center;
 }
