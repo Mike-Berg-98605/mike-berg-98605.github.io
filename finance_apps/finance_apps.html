@@ -6,34 +6,35 @@
   <p class="fin-apps-header-font">Statistics Calculator</p>
     
   <div class="fin-apps-body-font">
-    <p>Enter a list of comma-separated numbers below</p>
+    <p>Enter a list of comma-separated numbers to find the Mean, Median, Mode, Range, Variance and Standard Deviation</p>
     
     <input type="text" name="stats-numbers" id="stats-numbers" />
-    <button id="stats-btn" type="submit">Calculate</button>
+    
+    <button id="stats-btn" class="fin-apps-btns" type="submit">Calculate</button>
     
     <div class="fin-apps-flex-container">
       <div>
-        <p>Mean:</p> 
+        <p>Mean</p> 
         <p id="stats-mean"></p>
       </div>
       <div>
-         <p>Median:</p> 
+         <p>Median</p> 
          <p id="stats-median"></p>
       </div>
       <div>
-        <p>Mode:</p> 
+        <p>Mode</p> 
         <p id="stats-mode"></p>
       </div>
       <div>
-        <p>Range:</p> 
+        <p>Range</p> 
         <p id="stats-range"></p>
       </div>
       <div>
-        <p>Variance:</p>
+        <p>Variance</p>
         <p id="stats-variance"></p>
       </div>
       <div>
-        <p>Std Dev:</p>
+        <p>Std Dev</p>
         <p id="stats-standardDeviation"></p>
    </div>
  </div>        
@@ -42,22 +43,30 @@
 <div class="fin-apps-box">    
   <p class="fin-apps-header-font">Mortgage Calculator</p>
     
-  <div class="fin-apps-body-font">
+  <div class="fin-apps-body-font" >
+    
     <p>Enter Your Mortgage Information below</p>
-        
-    <label for="numbers">Princial Amount:</label>
-    <input type="text" name="stats-numbers" id="stats-numbers" />
     
-    <label for="numbers">Interest Rate:</label>
-    <input type="text" name="stats-numbers" id="stats-numbers" />
+    <div class="mort-calc-box">
     
-    <label for="numbers">Term:</label>
-    <input type="text" name="stats-numbers" id="stats-numbers" />
+    <div>    
+      <label for="numbers">Principal:</label>
+      <input type="text" name="stats-numbers" id="stats-numbers" />
+    </div>
+    <div>
+      <label for="numbers">Rate:</label>
+      <input type="text" name="stats-numbers" id="stats-numbers" />
+    </div>
+    <div>
+      <label for="numbers">Term:</label>
+      <input type="text" name="stats-numbers" id="stats-numbers" />
+    </div>
     
-    <button id="stats-btn" type="submit">Calculate</button>
+    <button id="stats-btn" class="fin-apps-btns" type="submit">Calculate</button>
     
+  </div>
     
- </div>        
+  </div>        
 </div>    
 
 <div id="footer"></div>

@@ -1,6 +1,8 @@
 .fin-apps-welc-message {
     color: white;
     text-align:center;
+    font-size: 35px;
+    margin: 10px;
 }
 
 .fin-apps-box {
@@ -34,8 +36,17 @@
 }
 
 .fin-apps-flex-container > div {
-  width: 7%;
+  width: 90px;
   height: 50px;
   margin: 5px;
   text-align: center;
 }
+.mort-calc-box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: right;
+  
+}
+
