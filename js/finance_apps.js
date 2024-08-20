@@ -61,10 +61,10 @@ function calculate() {
   const variance = getVariance(numbers);
   const standardDeviation = getStandardDeviation(numbers);
 
-  document.querySelector("#stats-mean").textContent = mean;
-  document.querySelector("#stats-median").textContent = median;
+  document.querySelector("#stats-mean").textContent = mean.toFixed(2);
+  document.querySelector("#stats-median").textContent = median.toFixed(2);
   document.querySelector("#stats-mode").textContent = mode;
-  document.querySelector("#stats-range").textContent = range;
-  document.querySelector("#stats-variance").textContent = variance;
-  document.querySelector("#stats-standardDeviation").textContent = standardDeviation;
+  document.querySelector("#stats-range").textContent = range.toFixed(2);
+  document.querySelector("#stats-variance").textContent = variance.toFixed(2);
+  document.querySelector("#stats-standardDeviation").textContent = standardDeviation.toFixed(2);
 }
