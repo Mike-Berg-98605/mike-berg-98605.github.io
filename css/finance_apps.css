@@ -1,3 +1,7 @@
+/***************************************
+********FIN APPS************************
+***************************************/
+
 .fin-apps-welc-message {
     color: white;
     text-align:center;
@@ -44,12 +48,8 @@
   text-align: center;
 }
 
-.mort-calc-box {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  text-align: right; 
+.float-clear {
+  clear:both;
 }
 
 .fin-apps-btns {
@@ -69,8 +69,30 @@
   font-size: 15px;
 }
 
+/************************************
+*********MORT CALC*******************
+************************************/
 
+.mort-calc-box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  text-align: center; 
+}
 
+.mort-calc-label {
+  width: 120px;
+  text-align: center;
+}
+
+.mort-calc-float {
+  float:left;
+}
+
+#mort-monthly-payment {
+  height: 30px;
+}
 
 
 

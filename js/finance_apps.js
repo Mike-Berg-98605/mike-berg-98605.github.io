@@ -1,5 +1,22 @@
+/****************************************************
+*************MORTGAGE CALCULATOR*********************
+****************************************************/
+const mortCalcBtn = document.getElementById("mort-calc-btn");
+mortCalcBtn.addEventListener("click", mortCalculate);
+
+function mortCalculate() {
+  const princial = document.querySelector("#mort-princial").value;
+  const rate = document.querySelector("#mort-rate").value;
+  const term = document.querySelector("#mort-term").value;
+  
+  
+}
+/*****************************************************
+*************STATS************************************
+*****************************************************/
+
 const statsBtn = document.getElementById("stats-btn");
-statsBtn.addEventListener("click", calculate);
+statsBtn.addEventListener("click", statsCalculate);
 
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
@@ -49,7 +66,7 @@ const getStandardDeviation = (array) => {
   return standardDeviation;
 }
 
-function calculate() {
+function statsCalculate() {
   const value = document.querySelector("#stats-numbers").value;
   const array = value.split(/,\s*/g);
   const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));

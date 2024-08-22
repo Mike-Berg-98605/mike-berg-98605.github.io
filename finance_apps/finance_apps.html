@@ -1,7 +1,11 @@
 <div id="header"></div>
 
 <div class="fin-apps-welc-message">Welcome to The Finance Apps Page!</div>
-    
+
+<!--*******************************************
+*****************STATS CALCULATOR**************
+********************************************-->
+
 <div class="fin-apps-box">    
   <p class="fin-apps-header-font">Statistics Calculator</p>
     
@@ -42,29 +46,41 @@
  </div>        
 </div>
 
+<!--*********************************************
+*********MORTGAGE CALCULATOR*********************
+**********************************************-->
+
 <div class="fin-apps-box">    
   <p class="fin-apps-header-font">Mortgage Calculator</p>
     
   <div class="fin-apps-body-font" >
     
-    <p>Enter Your Mortgage Information below</p>
+    <p>Enter Your Mortgage Info below to Calculate your Monthly Payment</p>
     
     <div class="mort-calc-box">
     
     <div>    
-      <label for="numbers">Principal:</label>
-      <input type="text" name="stats-numbers" class="fin-apps-input" id="mort-principal" />
+      <div class="mort-calc-label mort-calc-float">Principal:</div>
+      <div class="mort-calc-float"><input type="text" name="stats-numbers" class="fin-apps-input" id="mort-principal" /></div>
     </div>
+    <div class="float-clear"></div>
     <div>
-      <label for="numbers">Rate:</label>
-      <input type="text" name="stats-numbers" class="fin-apps-input" id="mort-rate" />
+      <div class="mort-calc-label mort-calc-float">Rate:</div>
+      <div class="mort-calc-float"><input type="text" name="stats-numbers" class="fin-apps-input" id="mort-rate" /></div>
     </div>
+    <div class="float-clear"></div>
     <div>
-      <label for="numbers">Term:</label>
-      <input type="text" name="stats-numbers" class="fin-apps-input" id="mort-term" />
+      <div class="mort-calc-label mort-calc-float">Term (Years):</div>
+      <div class="mort-calc-float"><input type="text" name="stats-numbers" class="fin-apps-input" id="mort-term" /></div>
     </div>
+    <div class="float-clear"></div>
+    <div>
+      <div class="mort-calc-label mort-calc-float">Payment:</div>
+      <div class="mort-calc-float" id="mort-monthly-payment"></div>
+    </div>
+    <div class="float-clear"></div>
     
-    <button id="stats-btn" class="fin-apps-btns" type="submit">Calculate</button>
+    <button id="mort-calc-btn" class="fin-apps-btns" type="submit">Calculate</button>
     
   </div>
     
