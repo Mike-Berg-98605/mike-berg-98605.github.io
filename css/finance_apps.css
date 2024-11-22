@@ -2,6 +2,17 @@
 ********FIN APPS************************
 ***************************************/
 
+.fin-apps-hr-white {
+  width: 50%;
+  margin: auto;
+  border: 2px solid white;
+}
+.fin-apps-hr-black {
+  width: 50%;
+  margin: auto;
+  border: 3px solid black;
+}
+
 .fin-apps-welc-message {
     color: white;
     text-align:center;

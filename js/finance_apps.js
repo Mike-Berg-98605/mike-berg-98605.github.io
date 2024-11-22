@@ -2,14 +2,18 @@
 *************MORTGAGE CALCULATOR*********************
 ****************************************************/
 const mortCalcBtn = document.getElementById("mort-calc-btn");
+const mortMonthlyPayment = document.getElementById("mort-monthly-payment");
+
 mortCalcBtn.addEventListener("click", mortCalculate);
 
 function mortCalculate() {
-  const princial = document.querySelector("#mort-princial").value;
+  const principal = document.querySelector("#mort-principal").value;
   const rate = document.querySelector("#mort-rate").value;
   const term = document.querySelector("#mort-term").value;
   
-  
+  const monthlyPayment = ((rate / 100 / 12) * principal) / (1 - ((1 + (rate / 100 / 12)) ^ (-term * 12)))
+
+  mortMonthlyPayment.textContent = monthlyPayment;
 }
 /*****************************************************
 *************STATS************************************
