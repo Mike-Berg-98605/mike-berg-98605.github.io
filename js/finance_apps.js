@@ -11,9 +11,9 @@ function mortCalculate() {
   const rate = document.querySelector("#mort-rate").value;
   const term = document.querySelector("#mort-term").value;
   
-  const monthlyPayment = ((rate / 100 / 12) * principal) / (1 - ((1 + (rate / 100 / 12)) ^ (-term * 12)))
+  const monthlyPayment = ((rate / 100 / 12) * principal) / (1 - ((1 + (rate / 100 / 12)) ** (-term * 12)))
 
-  mortMonthlyPayment.textContent = monthlyPayment;
+  mortMonthlyPayment.textContent = `$${monthlyPayment.toFixed(2)}`;
 }
 /*****************************************************
 *************STATS************************************
