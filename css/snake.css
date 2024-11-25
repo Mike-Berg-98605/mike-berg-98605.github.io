@@ -16,7 +16,7 @@
     height: 500px;
 }
 #snake-play {
-    font-size: 20px;
+    font-size: 27px;
     width: 100px;
     border-radius: 5px;
     height: 30px;
@@ -55,5 +55,11 @@
 	}
     .snake-text {
         text-align: center;
+    }
+    .snake-box {
+        width: 30%;
+    }
+    #snake-score {
+        font-size: 30px;
     }
 }

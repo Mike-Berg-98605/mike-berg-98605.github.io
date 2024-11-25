@@ -42,7 +42,7 @@
     border: 1px solid black;
     height: 100%;
     width: 100%;
-    font-size: 100%;
+    font-size: 150px;
     background: white;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@
     border: 1px solid black;
     height: 100%;
     width: 100%;
-    font-size: 7px;
+    font-size: 140px;
     background: white;
    }
     .ascii-text-div {

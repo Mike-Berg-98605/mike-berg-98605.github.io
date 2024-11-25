@@ -240,6 +240,7 @@ html {
     .menu-flex-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .menu-title {
         text-align: center;

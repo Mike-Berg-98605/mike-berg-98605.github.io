@@ -1,32 +1,31 @@
-var snailFirst = true;
-var turtleFirst = false;
-var snailWins = 0;
-var turtleWins = 0;
+var XFirst = true;
+var OFirst = false;
+var XWins = 0;
+var OWins = 0;
 var won = false;
 var winBoxElement;
 var turnBoxBlinker;
 var winnerBoxBlinker;
 var currentPlayer;
-if(snailFirst == true) {
-    currentPlayer = "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────";
+const XX = "X";
+const OO = "O";
+
+if(XFirst == true) {
+    currentPlayer = XX;
     function place(box) {
         if (box.innerText != "" || won) return;
         box.innerText = currentPlayer;
         checkGameBoard();
-        currentPlayer == "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────"
-        ? currentPlayer = "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄"
-        : currentPlayer = "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────";
+        currentPlayer == XX ? currentPlayer = OO : currentPlayer = XX;
     }
 }
-if(turtleFirst == true) {
-    currentPlayer = "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄";
+if(OFirst == true) {
+    currentPlayer = OO;
     function place(box) {
         if (box.innerText != "" || won) return;
         box.innerText = currentPlayer;
         checkGameBoard();
-        currentPlayer == "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄"
-        ? currentPlayer = "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────"
-        : currentPlayer = "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄";
+        currentPlayer == OO ? currentPlayer = XX : currentPlayer = OO;
     }
 }
 function checkWinner(first, second, third) {
@@ -44,19 +43,17 @@ function checkWinner(first, second, third) {
             turnBoxElement.style.visibility = (turnBoxElement.style.visibility == 'hidden' ? '' : 'hidden');
         }, blink_speed);
             
-        if(currentPlayer == "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────")
-        {
-        snailWins++;
-	document.getElementById("ascii-turn-box").innerText = "********Snail Wins!!*******";
-	document.getElementById("ascii-winner-box").innerText = "********Snail Wins!!*******";
-	document.getElementById("ascii-snail-wins").innerText = "Snail Wins: " + snailWins;
+        if(currentPlayer == XX) {
+            XWins++;
+	        document.getElementById("ascii-turn-box").innerText = "********X Wins!!*******";
+	        document.getElementById("ascii-winner-box").innerText = "********X Wins!!*******";
+	        document.getElementById("ascii-snail-wins").innerText = "X Wins: " + XWins;
         }
-        if(currentPlayer == "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄")
-        {
-	turtleWins++;
-	document.getElementById("ascii-turn-box").innerText = "********Turtle Wins!!*******";
-	document.getElementById("ascii-winner-box").innerText = "********Turtle Wins!!*******";
-	document.getElementById("ascii-turtle-wins").innerText = "Turtle Wins: " + turtleWins;
+        if(currentPlayer == OO) {
+	        OWins++;
+	        document.getElementById("ascii-turn-box").innerText = "********O Wins!!*******";
+	        document.getElementById("ascii-winner-box").innerText = "********O Wins!!*******";
+	        document.getElementById("ascii-turtle-wins").innerText = "O Wins: " + OWins;
         }
     }
 }
@@ -69,28 +66,28 @@ function resetBoard() {
     clearInterval(winnerBoxBlinker);
     clearInterval(turnBoxBlinker);
     won = false;
-    if(snailFirst == true) {
-        turtleFirst = true;
-        snailFirst = false;
+    if(XFirst == true) {
+        OFirst = true;
+        XFirst = false;
         document.getElementById("ascii-turn-box").style.visibility = "visible";
         document.getElementById("ascii-winner-box").style.visibility = "visible";
-        document.getElementById("ascii-turn-box").innerText = "Up First: Turtle";
-        document.getElementById("ascii-winner-box").innerText = "May the hardest shell win!!";
-        currentPlayer = "─▄▀▀▀▄────▄▀█▀▀█▄────\n\▄▀─▀─▀▄▄▀█▄▀─▄▀─▄▀▄──\n\█▄▀█───█─█▄▄▀─▄▀─▄▀▄─\n\──█▄▄▀▀█▄─▀▀▀▀▀▀▀─▄█─\n\─────▄████▀▀▀▀████─▀▄";
+        document.getElementById("ascii-turn-box").innerText = "Up First: O";
+        document.getElementById("ascii-winner-box").innerText = "Glory to The Victor!!";
+        currentPlayer = OO;
     } else {
-        snailFirst = true;
+        XFirst = true;
         document.getElementById("ascii-turn-box").style.visibility = "visible";
         document.getElementById("ascii-winner-box").style.visibility = "visible";
-        document.getElementById("ascii-turn-box").innerText = "Up First: Snail";
-        document.getElementById("ascii-winner-box").innerText = "May the hardest shell win!!";
-        currentPlayer = "──────▄▄▄──────────\n\────▄▀░▄░▀▄────────\n\────█░█▄▀░█────────\n\────█░▀▄▄▀█▄█▄▀────\n\──▄▄█▄▄▄▄███▀──────";
+        document.getElementById("ascii-turn-box").innerText = "Up First: X";
+        document.getElementById("ascii-winner-box").innerText = "Glory to The Victor!!";
+        currentPlayer = XX;
     }
 }
 function resetScores() {
-    snailWins = 0;
-    turtleWins = 0;
-    document.getElementById("ascii-turtle-wins").innerText = "Turtle Wins: " + turtleWins;
-    document.getElementById("ascii-snail-wins").innerText = "Snail Wins: " + snailWins;
+    XWins = 0;
+    OWins = 0;
+    document.getElementById("ascii-turtle-wins").innerText = "O Wins: " + OWins;
+    document.getElementById("ascii-snail-wins").innerText = "X Wins: " + XWins;
     clearInterval(winnerBoxBlinker);
     clearInterval(turnBoxBlinker);
 }
